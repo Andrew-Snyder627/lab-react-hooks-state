@@ -2,13 +2,18 @@ import React, { useState } from "react";
 import ProductList from "./components/ProductList";
 import DarkModeToggle from "./components/DarkModeToggle";
 import Cart from "./components/Cart";
+import { sampleProducts } from "./__tests__/helpers";
+
+const allCategories = [
+  "All",
+  ...new Set(sampleProducts.map((product) => product.category)),
+];
 
 const App = () => {
   // TODO: Implement state for dark mode toggle
   const [darkMode, setDarkMode] = useState(false);
   // TODO: Implement state for cart management
   const [cart, setCart] = useState([]);
-
   // TODO: Implement state for category filtering
   const [category, setCategory] = useState("All");
 
