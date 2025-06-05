@@ -1,27 +1,68 @@
-/* TODO: Style the product card container */
 .card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin: 1rem auto;
-  padding: 1rem;
-  max-width: 300px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  margin: 2rem auto 1rem auto;
+  padding: 1.5rem;
+  max-width: 350px;
   background: #fafafa;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.2s, background 0.2s;
 }
-/* TODO: Add special styling for out-of-stock products */
+
 .outOfStock {
   opacity: 0.6;
   background: #eee;
-  border: 1px solid #f66;
+  border: 1.5px dashed #ffb3b3;
 }
 
 .inCart {
   border: 2px solid #646cff;
-  box-shadow: 0 0 10px #646cff33;
+  box-shadow: 0 0 16px #646cff33;
 }
-/* TODO: Style the add/remove button */
 
-button:disabled {
-  opacity: 0.6;
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  margin: 0.5em 0;
+}
+
+/* Button style inside product card */
+.card button {
+  border-radius: 8px;
+  border: none;
+  padding: 0.7em 1.2em;
+  font-size: 1em;
+  font-weight: 600;
+  background-color: #222;
+  color: #fff;
+  margin-top: 1em;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: background 0.18s;
+}
+
+.card button:hover:not(:disabled) {
+  background: #646cff;
+}
+
+.card button:disabled {
+  background: #aaa;
   cursor: not-allowed;
+  opacity: 0.7;
+}
+
+:global(.dark-mode) .card {
+  background: #292b34;
+  border-color: #444;
+  color: #fff;
+}
+:global(.dark-mode) .outOfStock {
+  background: #383838;
+  border-color: #ff7f7f;
+}
+:global(.dark-mode) .inCart {
+  border-color: #9e99ff;
+  box-shadow: 0 0 16px #9e99ff33;
 }

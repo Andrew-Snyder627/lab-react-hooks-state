@@ -9,14 +9,16 @@ const ProductList = ({ products, cart, handleCartToggle }) => {
   return (
     <div>
       <h2>Available Products</h2>
-      {products.map((product) => (
-        <ProductCard
-          key={product.id}
-          product={product}
-          inCart={!!cart.find((item) => item.id === product.id)}
-          handleCartToggle={handleCartToggle}
-        />
-      ))}
+      <div className="product-grid">
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            inCart={!!cart.find((item) => item.id === product.id)}
+            handleCartToggle={handleCartToggle}
+          />
+        ))}
+      </div>
     </div>
   );
 };

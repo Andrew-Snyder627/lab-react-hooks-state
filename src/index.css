@@ -4,9 +4,6 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -24,8 +21,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -65,4 +60,22 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* ADD THIS AT THE BOTTOM */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body.light-mode {
+  background: #fff;
+  color: #213547;
+}
+
+body.dark-mode {
+  background: #242424;
+  color: #fff;
 }
