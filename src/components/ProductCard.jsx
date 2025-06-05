@@ -9,6 +9,7 @@ const ProductCard = ({ product, inCart, handleCartToggle }) => {
       }`}
     >
       <h3>{product.name}</h3>
+      <p>Category: {product.category}</p>
       <p>Price: {product.price}</p>
       <p>Status: {product.inStock ? "In Stock" : "Out of Stock"}</p>
       {/* TODO: Implement Add to Cart button functionality */}

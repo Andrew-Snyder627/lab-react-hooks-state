@@ -1,3 +1,13 @@
 /* TODO: Define styles for dark mode */
 
 /* TODO: Ensure text and background colors adjust for dark mode */
+
+:global(.dark-mode) {
+  background: #242424;
+  color: #fff;
+}
+
+:global(.light-mode) {
+  background: #fff;
+  color: #213547;
+}

@@ -1,5 +1,27 @@
 /* TODO: Style the product card container */
-
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 300px;
+  background: #fafafa;
+  transition: box-shadow 0.2s, background 0.2s;
+}
 /* TODO: Add special styling for out-of-stock products */
+.outOfStock {
+  opacity: 0.6;
+  background: #eee;
+  border: 1px solid #f66;
+}
 
+.inCart {
+  border: 2px solid #646cff;
+  box-shadow: 0 0 10px #646cff33;
+}
 /* TODO: Style the add/remove button */
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

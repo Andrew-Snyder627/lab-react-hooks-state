@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ProductList from "./components/ProductList";
 import DarkModeToggle from "./components/DarkModeToggle";
 import Cart from "./components/Cart";
-import { sampleProducts } from "./__tests__/helpers";
+import { sampleProducts } from "./helpers";
 
 const allCategories = [
   "All",
@@ -23,6 +23,7 @@ const App = () => {
       ? sampleProducts
       : sampleProducts.filter((product) => product.category === category);
 
+  const productsToShow = filteredProducts.length > 0 ? filteredProducts : [];
   // Add/remove cart functionality
   const handleCartToggle = (product) => {
     setCart((previous) =>
@@ -71,7 +72,7 @@ const App = () => {
 
       {/* Display initial sample products */}
       <ProductList
-        products={filteredProducts}
+        products={productsToShow}
         cart={cart}
         handleCartToggle={handleCartToggle}
       />
